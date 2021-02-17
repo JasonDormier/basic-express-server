@@ -14,18 +14,15 @@ app.use(express.json());
 app.get('/person', logger, validator, nameObject);
 
 function nameObject(request, response) {
-  const name = request.query.name;
+  const nameObject = {
+    name: request.query.name,
+  };
 
-  console.log('Hello');
-  console.log(name);
-  if (!name) {
-    response.status(500);
-  }
-  response.status(200).json(name);
+  response.status(200).json(nameObject);
 }
 
-app.use('*', error404);
 app.use(error500);
+app.use('*', error404);
 
 module.exports = {
   app: app,
