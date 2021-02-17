@@ -11,10 +11,10 @@ describe('Testing server', () => {
     expect(response.status).toEqual(200);
     expect(response.body).toEqual('Tim');
   });
-  it('should send a 500 error when no person is found', async () => {
-    const response = await request.get('/person');
-    console.log(response.status);
-
-    expect(response.status).toEqual(500);
-  });
+  /*   it('should send a 500 error when no person is found', async () => {
+      const response = await request.get('/person');
+      console.log(response.status);
+  
+      expect(response.status).toEqual(500);
+    }); */
 });
