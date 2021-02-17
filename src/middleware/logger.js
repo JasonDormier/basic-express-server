@@ -1,6 +1,6 @@
 'use strict';
 
 module.exports = function (request, response, next) {
-  console.log(`${request.method} :: ${request.url}`);
+  console.log(`${request.method} :: ${request.path}`);
   next();
 };

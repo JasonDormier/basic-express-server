@@ -4,6 +4,7 @@ module.exports = function (request, response, next) {
   const name = request.query.name;
   if (!name) {
     next('no name found');
+  } else {
+    next();
   }
-  next();
 };
